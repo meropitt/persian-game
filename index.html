@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>بوستان — تعلّم الفارسية</title>
+<meta name="description" content="لعبة تفاعلية لتعلم اللغة الفارسية للمبتدئين: الأبجدية، المفردات، الجمل، بطاقات تعليمية، اختبارات، ولوحة صدارة." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="sky" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <button class="brand" id="brandHome" aria-label="الصفحة الرئيسية">
+      <span class="brand__mark">☾</span>
+      <span class="brand__name">بوستان</span>
+    </button>
+    <div class="topbar__stats" id="topbarStats" hidden>
+      <span class="stat"><span class="stat__icon">★</span><span id="statXp">0</span> XP</span>
+      <span class="stat stat--user"><span id="statUsername">ضيف</span></span>
+      <button class="linklike" id="logoutBtn">خروج</button>
+    </div>
+  </div>
+</header>
+
+<main id="view" class="view" role="main"></main>
+
+<nav class="tabbar" id="tabbar" hidden>
+  <button class="tabbar__btn" data-route="dashboard" aria-label="الرئيسية">
+    <span class="tabbar__icon">⌂</span><span>الرئيسية</span>
+  </button>
+  <button class="tabbar__btn" data-route="lessons" aria-label="الدروس">
+    <span class="tabbar__icon">✦</span><span>الدروس</span>
+  </button>
+  <button class="tabbar__btn" data-route="quiz-setup" aria-label="اختبار">
+    <span class="tabbar__icon">◈</span><span>اختبار</span>
+  </button>
+  <button class="tabbar__btn" data-route="leaderboard" aria-label="الصدارة">
+    <span class="tabbar__icon">☆</span><span>الصدارة</span>
+  </button>
+</nav>
+
+<div id="toast" class="toast" aria-live="polite"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
